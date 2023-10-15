@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    background: #222;
+}
+html{color: #fff; font-family: 'Oswald', sans-serif;}
+a{
+    color: white;
+    margin-top: 0px;
+}
+.drag{
+    border-top: 1px solid rgba(255,255,255,0.6);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    backdrop-filter: blur(11px) brightness(80%);
+}
+.pole-for-file {
+    cursor: pointer;
+    border-right: 1px solid rgba(255,255,255,0.6);
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    width: 30%;
+    align-items: center;
+    transition: 0.08s ease;
+    overflow-y: scroll;
+}
+.input__wrapper {
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.input__file-icon-wrapper {
+    height: 60px;
+    width: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+
+.input__file-button {
+    width: 100%;
+    max-width: 290px;
+    height: 60px;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+}   
+.focus{
+    background: rgba(92, 162, 246, 0.2);
+}
+.upload{
+    width: 100px;
+    padding: 10px 20px 10px 20px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255, 0.8);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.none{
+    display: none;
+}
+
+.upload:hover{
+    box-shadow: 0px 0px 4px rgba(255,255,255,0.6) inset;
+    background: rgba(205,205,205,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.text-replace {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.5);
+    background: rgba(200,200,200,0.1);
+    font-size: 24px;
+    z-index: -1;
+}
+.self-text{
+    padding-top: -50%;
+    transform: translate(0, 50%);
+}
+.titles{
+    z-index: -1;
+    text-align: center;
+}
+.item-name-up{
+    border: 1px solid rgba(255,255,255, 0.6);
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.files {
+    width: 70%;
+}
+.pole{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 4px;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+.container{
+    margin-top: 10px;
+}
+.item {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    animation-name: Appearance;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+    border-radius: 2px;
+}
+
+@-webkit-keyframes Appearance {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes Appearance {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes Appearance {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes Appearance {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.icon:hover{
+    filter: brightness(70%);
+}
+.filter {
+    display: flex;
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+    padding: 10px;
+}
+.select{
+    border-radius: 5px;
+    margin-left: 10px;
+    background: rgb(88, 144, 181);
+}
+.files{
+    padding: 10px;
+}
+.filet_add_button{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+.images{
+    overflow-y: scroll;
+}
+
+.upload_file{
+    margin-right: 5px;
+    max-height: 70px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(20,20,20,0.8);
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+.upload_file:hover{
+    filter: brightness(50%);
+}
+.wrapper-for-close{
+    position: relative;
+}
+.red-krest{
+    width: 100px;
+    top:0px;
+    left: 0px;
+    position: absolute;
+}
+
